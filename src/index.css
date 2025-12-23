@@ -5,7 +5,7 @@ html {
 }
 .card {
   width: 350px;
-  height: 470px;
+  /* height: 470px; */
   background-color: white;
   border-radius: 40px;
   display: flex;
@@ -53,25 +53,33 @@ html {
 }
 
 .banner-container .exp {
-  width: 60%;
+  /* width: 60; */
   position: absolute;
   bottom: 7%;
-  right: 7%;
+  right: 0%;
   display: flex;
   align-items: center;
   gap: 5px;
   color: gray;
+  font-size: 1rem;
 }
 
 .banner-container .exp .exp-grid {
   display: grid;
-  grid-template-columns: repeat(35, 3px);
-  gap: 2px;
-  height: 13px;
+  grid-template-columns: repeat(35, 4px);
+  gap: 1px;
+  height: 12px;
+}
+
+@media (width>500px) {
+  .banner-container .exp .exp-grid {
+    grid-template-columns: repeat(35, 4px);
+  }
 }
 
 .banner-container .exp .exp-grid .strip {
   border-radius: 50px;
+  width: 90%;
 }
 
 .banner-container .follow {

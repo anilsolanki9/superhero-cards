@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import Card from './components/Card';
 
 const App = () => {
-
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();

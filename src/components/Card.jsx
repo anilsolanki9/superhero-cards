@@ -2,7 +2,6 @@ import React from 'react';
 import Strip from './Strip.jsx';
 
 const Card = props => {
-  
   // let degree = 270;
   // let experience = 70;
 
