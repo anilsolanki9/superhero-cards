@@ -1,7 +1,29 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Card from './components/Card';
 
 const App = () => {
+
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = e => {
+      if (e.key.toLowerCase() === 'f') {
+        toggleFullScreen();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const marvelHeroes = [
     {
       bannerIMG: 'https://i.pinimg.com/1200x/38/3e/b1/383eb13e3bdcd850353a7a8597380b5d.jpg',
